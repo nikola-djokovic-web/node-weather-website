@@ -6,12 +6,7 @@ const messageTwo = document.querySelector('#message-two')
 
 
 
-fetch('http://puzzle.mead.io/puzzle').then((response) => {
-    response.json().then((data) => {
-        console.log(data);
-    })
-})
-
+// c
 
 // fetch('http://localhost:3000/weather?address=' + location).then((response) => {
 //     response.json().then((data) => {
@@ -34,7 +29,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = "Loading..."
     messageTwo.textContent = ''
     
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
     response.json().then((data) => {
         if(data.error) {
             messageOne.textContent = data.error
